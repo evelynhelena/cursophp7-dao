@@ -21,9 +21,19 @@ echo json_encode($lista);*/
 /*$busca = Usuario::search("Ev");// traz todos os usurios que começam com EV
 echo json_encode($busca);*/
 
-$usuario = new Usuario();
-$usuario->login("Evelyn","123456");
+/*$usuario = new Usuario();
+$usuario->login("Evelyn","123456"); //PEGA PELO LOGIN E SENHA.
+echo ($usuario);*/
 
-echo ($usuario);
+/*$aluno = new Usuario("thereza","789");//insere um usuario
+$aluno->insert();
+echo $aluno;*/
+
+$usuario = new Usuario();
+$usuario->loadById(10);
+
+$usuario->update("Samia","biel");
+
+echo $usuario;
 
 ?>
